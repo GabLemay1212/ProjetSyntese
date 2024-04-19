@@ -1,0 +1,51 @@
+﻿<Window x:Class="ProjetSyntese.StatsMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetSyntese"
+        mc:Ignorable="d"
+        Title="StatsMenu" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Statistic">
+                <Grid x:Name="StatsGrid" Margin="10,0,549,30" Height="341">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Catacomb level :" VerticalAlignment="Top" Margin="20,0,0,0" HorizontalAlignment="Right"/>
+                    <Label Content="Social :" VerticalAlignment="Top" Margin="20,30,0,0" HorizontalAlignment="Right"/>
+                    <Label Content="Combat :" VerticalAlignment="Top" Margin="20,60,0,0" HorizontalAlignment="Right"/>
+                    <Label Content="Fishing :" VerticalAlignment="Top" Margin="20,90,0,0" HorizontalAlignment="Right"/>
+                    <Label Content="Enchanting :" VerticalAlignment="Top" Margin="20,120,0,0" HorizontalAlignment="Right"/>
+                    <Label Content="Taming :" VerticalAlignment="Top" Margin="20,150,0,0" HorizontalAlignment="Right"/>
+                    <Label Content="Farming :" VerticalAlignment="Top" Margin="20,180,0,0" HorizontalAlignment="Right"/>
+                    <Label Content="Carpentry :" VerticalAlignment="Top" Margin="20,210,0,0" HorizontalAlignment="Right"/>
+                    <Label Content="Alchemy :" VerticalAlignment="Top" Margin="20,240,0,0" HorizontalAlignment="Right"/>
+                    <Label Content="Mining :" VerticalAlignment="Top" Margin="20,270,0,0" HorizontalAlignment="Right"/>
+
+
+                    <Label Content="{Binding CatacombLevel}" VerticalAlignment="Top" Margin="20,0,0,0" Grid.Column="1" HorizontalAlignment="Left"/>
+                    <Label Content="{Binding Social}" VerticalAlignment="Top" Margin="20,30,0,0" Grid.Column="1" HorizontalAlignment="Left"/>
+                    <Label Content="{Binding Combat}" VerticalAlignment="Top" Margin="20,60,0,0" Grid.Column="1" HorizontalAlignment="Left"/>
+                    <Label Content="{Binding Fishing}" VerticalAlignment="Top" Margin="20,90,0,0" Grid.Column="1" HorizontalAlignment="Left"/>
+                    <Label Content="{Binding Enchanting}" VerticalAlignment="Top" Margin="20,120,0,0" Grid.Column="1" HorizontalAlignment="Left"/>
+                    <Label Content="{Binding Taming}" VerticalAlignment="Top" Margin="20,150,0,0" Grid.Column="1" HorizontalAlignment="Left"/>
+                    <Label Content="{Binding Farming}" VerticalAlignment="Top" Margin="20,180,0,0" Grid.Column="1" HorizontalAlignment="Left"/>
+                    <Label Content="{Binding Carpentry}" VerticalAlignment="Top" Margin="20,210,0,0" Grid.Column="1" HorizontalAlignment="Left"/>
+                    <Label Content="{Binding Alchemy}" VerticalAlignment="Top" Margin="20,240,0,0" Grid.Column="1" HorizontalAlignment="Left"/>
+                    <Label Content="{Binding Mining}" VerticalAlignment="Top" Margin="20,270,0,0" Grid.Column="1" HorizontalAlignment="Left"/>
+                    
+                </Grid>
+            </TabItem>
+
+
+            <TabItem Header="Catacomb">
+                
+            </TabItem>
+        </TabControl>
+    </Grid>
+
+</Window>
