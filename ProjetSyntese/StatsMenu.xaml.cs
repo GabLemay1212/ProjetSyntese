@@ -48,8 +48,8 @@ namespace ProjetSyntese
                     float Mining = player.Mining;
                     float Social = player.Social;
                     float SkyblockLevel = player.SkyblockLevel;
-                    float CatacombLevel = player.CatacombLevel;
                     string Username = player.Username;
+                    string CuteName = player.CuteName;
                 }
                
                

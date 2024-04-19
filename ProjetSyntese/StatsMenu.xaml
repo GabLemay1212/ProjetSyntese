@@ -15,7 +15,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Label Content="Catacomb level :" VerticalAlignment="Top" Margin="20,0,0,0" HorizontalAlignment="Right"/>
+                    
                     <Label Content="Social :" VerticalAlignment="Top" Margin="20,30,0,0" HorizontalAlignment="Right"/>
                     <Label Content="Combat :" VerticalAlignment="Top" Margin="20,60,0,0" HorizontalAlignment="Right"/>
                     <Label Content="Fishing :" VerticalAlignment="Top" Margin="20,90,0,0" HorizontalAlignment="Right"/>
@@ -27,7 +27,7 @@
                     <Label Content="Mining :" VerticalAlignment="Top" Margin="20,270,0,0" HorizontalAlignment="Right"/>
 
 
-                    <Label Content="{Binding CatacombLevel}" VerticalAlignment="Top" Margin="20,0,0,0" Grid.Column="1" HorizontalAlignment="Left"/>
+                    
                     <Label Content="{Binding Social}" VerticalAlignment="Top" Margin="20,30,0,0" Grid.Column="1" HorizontalAlignment="Left"/>
                     <Label Content="{Binding Combat}" VerticalAlignment="Top" Margin="20,60,0,0" Grid.Column="1" HorizontalAlignment="Left"/>
                     <Label Content="{Binding Fishing}" VerticalAlignment="Top" Margin="20,90,0,0" Grid.Column="1" HorizontalAlignment="Left"/>

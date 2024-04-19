@@ -9,8 +9,8 @@ namespace ProjetSyntese.BLL.Model
     internal class Player
     {
         public int PlayerID { get; set; }
+        public string CuteName { get; set; }
         public string Username { get; set; }
-        public float CatacombLevel { get; set; }
         public float SkyblockLevel { get; set; }
         public float Social { get; set; }
         public float Combat { get; set; }

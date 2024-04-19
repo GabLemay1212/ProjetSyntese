@@ -41,10 +41,8 @@ namespace ProjetSyntese
                 string jsonResponse = await _mojangApiService.GetUUIDFromName(Name); ;
                 dynamic responseObject = JsonConvert.DeserializeObject(jsonResponse);
                 string uuid = responseObject.id;
-
                 string jsonResponseHypixel = await _hypixelApiService.GetSkyblockProfile(apiKey, uuid);
                 dynamic responseObjectHypixel = JsonConvert.DeserializeObject(jsonResponseHypixel);
-
                 int profileCount = responseObjectHypixel.profiles.Count;
 
                 for (int i = 0; i < profileCount; i++)
@@ -55,8 +53,8 @@ namespace ProjetSyntese
                     Grid.SetColumn(button, i); 
                     GridProfile.Children.Add(button);
                     button.Content = responseObjectHypixel.profiles[i].cute_name;
-                    int localIndex = i;
-                    button.Click += (sender, e) => Profile_Click(sender, e, localIndex, jsonResponseHypixel);
+                    int profileId = i;
+                    button.Click += (sender, e) => Profile_Click(sender, e, profileId, jsonResponseHypixel);
                    
                 }
             }
@@ -92,9 +90,9 @@ namespace ProjetSyntese
             statsMenu.Show();
             this.Close();
         }
-        private async void Profile_Click(object sender, RoutedEventArgs e, int localindex,string jsonResponseHypixel)
+        private async void Profile_Click(object sender, RoutedEventArgs e, int profileId,string jsonResponseHypixel)
         {
-            int profileId = localindex;
+            
 
             using (var context = new AppDbContext())
             {
@@ -122,11 +120,11 @@ namespace ProjetSyntese
                     Mining = member?.experience_skill_mining ?? 0,
                     Social = member?.experience_skill_social2 ?? 0,
                     SkyblockLevel = member?.leveling?.experience ?? 0,
-                    CatacombLevel = member?.dungeons?.dungeon_types?.catacombs?.experience ?? 0,
-                    Username = Name 
+                    Username = Name, 
+                    CuteName = responseObjectHypixel.profiles[profileId].cute_name
 
                 };
-                this.DataContext = player;
+               
 
                 context.Players.Add(player);
                 context.SaveChanges();

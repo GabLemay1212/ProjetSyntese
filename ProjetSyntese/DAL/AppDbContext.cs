@@ -10,7 +10,7 @@ namespace ProjetSyntese.DAL
     internal class AppDbContext : DbContext
     {
         public DbSet<Player> Players { get; set; }
-        public DbSet<Test> Tests { get; set; }
+        
 
         public AppDbContext() : base("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\gable\\source\\repos\\ProjetSyntese\\ProjetSyntese\\DL\\Database.mdf;Integrated Security=True")
         {
